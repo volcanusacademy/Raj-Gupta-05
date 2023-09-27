@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;  ///abstraction 
+
+class Bank{
+  
+  int balance=10000;
+  public:
+  void credit (int c){
+    
+    balance+=c;
+    
+    cout<<"\nafter credit balance :"<<balance;
+    
+  }
+    public:
+    void debit (int d){
+    
+    balance-=d;
+    
+    cout<<"\nafter debit balance :"<<balance;
+    
+}
+
+  public:
+  
+  void interest(int i){
+    balance = balance*i;
+    cout<<"\ninterest is: "<<balance;
+  }
+};
+
+int main(){
+  
+  Bank b;
+  b.credit(5000);
+  b.debit(2000);
+  b.interest(3);
+
+  return 0;
+  
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+ /// int a=0;
+ 
+ int a,b;
+ printf("enter value of row :");
+ scanf("%d",&a);
+ printf("enter value of column :");
+ scanf("%d",&b);
+  for(int i=0;i<=a;i++){
+      for(int j=0;j<=b;j++){
+          printf(" %d%d",i,j);
+      }
+      
+      printf("\n");
+  }
+
+    return 0;

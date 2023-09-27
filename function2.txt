@@ -1,0 +1,26 @@
+////calculate the are of rectengle 
+
+#include <stdio.h>
+
+int areaRectangle(int, int);
+
+int main()
+{
+    int l, b, area;
+    printf("Enter the length : ");
+    scanf("%d", &l);
+
+    printf("Enter the width : ");
+    scanf("%d", &b);
+
+    area = areaRectangle(l, b);
+
+    printf("The area of the rectangle : %d", area);
+
+    return 0;
+}
+
+int areaRectangle(int length, int width)
+{
+    return length * width;
+}

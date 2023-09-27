@@ -1,0 +1,342 @@
+2. Animal Polymorphism
+Create a simple hierarchy of animals (e.g., Dog, Cat, Bird) with a common method makeSound(). 
+Implement polymorphism by overriding this method in each animal class  void
+and demonstrate how you can make different animals produce their respective sounds using polymorphism.
+#include iostream
+using namespace std;
+class Animal{     
+  public
+  void makeSound(string a){   
+    coutnmow mowa;
+  }
+
+};
+
+class Dog  public Animal{
+  public
+  void makeSound1(string a){  function overriding
+    coutnbhou-bhoua;
+  }
+};
+
+class Bird  public Dog{
+  public
+  void makeSound2(string a){  
+    coutnchii-chiia;
+  }
+};  
+int main()
+{
+  Bird b;
+  b.makeSound2(bird);
+  Dog d;
+  d.makeSound1(dog);
+  Animal c;
+  c.makeSound(Cat);
+    return 0;
+}
+
+
+
+
+
+/******************************************************************************
+3. Employee Polymorphism:
+Define an Employee class with a method calculateSalary(). Create subclasses for different types of employees
+(e.g., Full_Time_Employee, Part_Time_Employee, Intern) 
+and demonstrate how polymorphism can be used to calculate salaries differently for each type of employee.
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+class employee{
+  public:
+  void calculateSalary(){
+    cout<<"\ncalculateSalary Full_Time_Employee";
+    cout<<"\ncalculateSalary Part_Time_Employee";
+    cout<<"\ncalculateSalary Intern";
+    
+  }
+};
+class Full_Time_Employee : public employee{
+  public:
+  void calculateSalary(int f){
+      int full = f*1500;
+       cout<<"\nsalary of Full_Time_Employee is : "<<full;
+  }
+  
+};
+class Part_Time_Employee : public Full_Time_Employee{
+  public:
+  void calculateSalary1(int p){
+      int part = p*500;
+       cout<<"\nsalary of Part_Time_Employee is : "<<part;
+  }
+};
+class Intern : public Part_Time_Employee {
+  public:
+  void calculateSalary2(int i){
+      int intern = i*200;
+       cout<<"\nsalary of Intern  is : "<<intern;
+  }
+};
+
+int main(){
+  employee e;
+  e.calculateSalary();
+  
+  Intern I;
+  I.calculateSalary2(28);
+  Part_Time_Employee P;
+  P.calculateSalary1(28);
+  Full_Time_Employee F;
+  F.calculateSalary(28);
+  
+  
+
+    return 0;
+}
+
+
+//3. Shape Inheritance:
+
+//Create a base class Shape with properties like color and methods like getArea().
+//Create subclasses (e.g., Circle, Rectangle, Triangle) that inherit from Shape
+//and implement the getArea() method differently for each shape. Demonstrate how to calculate the area of various shapes using inheritance
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class Shape {  //// base class 
+  public:
+ void calculateArea(){
+    
+  }
+  
+};
+
+class Circle : public Shape{   //// drived class 
+  public:
+  void  calculateArea(float r) /// passing float value 
+ {
+   int area;
+   area = 3.14*r*r;
+   
+   cout<<"\narea of circle is : "<<area;
+ }
+  
+};
+
+class Square : public Circle{
+  public:
+  void calculateArea(int a){
+  int area;
+   area = a*a;
+   
+   cout<<"\narea of square is : "<<area;
+ }
+  
+};
+
+class tringle : public Square{
+  public :
+  void calculateArea(int h, int b){
+  int area2;
+   area2 = 0.5*b*h;
+   
+   cout<<"\narea of square is : "<<area2;
+ }
+};
+int main()
+{
+    tringle t;
+    Square s;
+    Circle c;
+   s.calculateArea(15);
+   c.calculateArea(50);  ////calling functions 
+    t.calculateArea(14,10);
+    
+
+    return 0;
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class calc{   // compile time polymorphism // early binding // function overloading
+
+//Function name must be same but type or number of parameter should be diffrent
+public:
+void Area(float r){
+    
+    cout<<"Area of circle is: "<<3.14*r*r;
+}
+
+void Area(int s){  //overload
+     cout<<"\n Area of square is: "<<s*s;
+}
+void Area(int l, int b){   // overload
+    cout<<"\n Area of rectangle is: "<<l*b;
+}
+
+float Area(float l, float b, float h){ //overload
+    
+    return l*b*h;
+}
+void Area(float b, float h){ //overload
+    cout<<"\n Area of Triangle is: "<<0.5*b*h;
+    
+}
+};
+
+int main()
+{  int side;
+float result;
+    cout<<"Enter side of square";
+    cin>>side;
+    calc c;
+    c.Area(5.0f);
+    c.Area(side);
+    c.Area(5,6);
+   c.Area(2.5f,6.8f);
+    result =  c.Area(2.0f,5.5f,8.6f);
+    cout<<"\n Volume of cuboid id:"<<result;
+    
+    return 0;
+
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+class Bank{
+  
+  public:
+  void interest(); /// abstract function // visible 
+};
+
+class Sbi:  public Bank{
+  public:
+  void interest(){
+    cout<<"the interest of is : ";  /// implementatin //// hiden 
+  }
+};
+int main()
+{
+    Sbi s;
+    s.interest();
+
+    return 0;
+}
+
+
+//*2. Vehicle Inheritance:
+
+//Implement a base class Vehicle with attributes like make, model, and year. Create subclasses (e.g., Car, Bicycle, Motorcycle) that inherit from Vehicle and add properties or methods specific to each type of vehicle.
+
+
+#include <iostream>
+using namespace std;
+
+class Vehicle
+{
+public:
+  string model;
+  int year;
+  string make;
+};
+
+class car:public Vehicle
+{
+public:
+  car (string m, int y, string mk)
+  {
+
+    model = m;
+    year = y;
+    make = mk;
+  }
+
+  void display ()
+  {
+    cout << model;
+    cout << year;
+    cout << make;
+
+  }
+};
+
+class Bike:public car
+{
+public:
+  Bike (string m, int y, string mk)
+  {
+
+    model = m;
+    year = y;
+    make = mk;
+  }
+
+  void display1 ()
+  {
+    cout << model;
+    cout << year;
+    cout << make;
+
+  }
+};
+
+class Bicycle:public Bike
+{
+public:
+  Bicycle (string m, int y, string mk)
+  {
+
+    model = m;
+    year = y;
+    make = mk;
+  }
+
+  void display2 ()
+  {
+    cout << model;
+    cout << year;
+    cout << make;
+
+  }
+};
+
+int
+main ()
+{
+  car obj ("Sedan", 2023, "Hyundai");
+  
+  obj.display ();
+  
+  Bicycle ("Ranger",2023,"BMW");
+  
+  b.display2();
+  
+  
+  bike B("Sports", 2020, "kawasakii");
+  
+  B.display1();
+  
+  
+
+
+}
+
+
+
