@@ -1,1 +1,140 @@
-HTML-TEST-2 
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Food Ordering Assessment</title>
+
+    <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>  
+    
+    <style>
+        body {
+            
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+            background-image: url('C:/Users/Raj gupta/Downloads/top-view-food-frame-with-copy-space.jpg'); /* Path to your image file */
+            background-size: cover;/*This ensures the image covers the whole background */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            
+            
+            margin: 0;
+            padding: 0;
+        
+        }
+        h1 {
+            text-shadow: 20cm;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:whitesmoke;
+            font-size: xx-large;
+            text-align: center;
+            padding: 50px;
+        }
+        form {
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: gray;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            color:black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px 0;
+        }
+        .question p {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+        }
+        input[type="radio"], input[type="number"], textarea {
+            margin-top: 5px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #25b12c;
+        }
+    </style>
+</head>
+<body>
+   
+ 
+    
+    <h1 text-size="30px">Food Ordering Assessment</h1>
+    <form id="food-order-assessment">
+        <div class="question">
+            <p>What type of cuisine are you in the mood for?</p>
+            <label>
+                <input type="radio" name="cuisine" value="Italian"> Italian
+            </label>
+            <label>
+                <input type="radio" name="cuisine" value="Mexican"> Mexican
+            </label>
+            <label>
+                <input type="radio" name="cuisine" value="Chinese"> Chinese
+            </label>
+        </div>
+        <div class="question">
+            <p>How spicy do you like your food?</p>
+            <label>
+                <input type="radio" name="spiciness" value="Mild"> Mild
+            </label>
+            <label>
+                <input type="radio" name="spiciness" value="Medium"> Medium
+            </label>
+            <label>
+                <input type="radio" name="spiciness" value="Spicy"> Spicy
+            </label>
+        </div>
+        <div class="question">
+            <p>Choose a food item you'd like to order.</p>
+            <label>
+                <input type="radio" name="food-item" value="Burger"> Burger
+            </label>
+            <label>
+                <input type="radio" name="food-item" value="Pizza"> Pizza
+            </label>
+            <label>
+                <input type="radio" name="food-item" value="Pasta"> Pasta
+            </label>
+            <label>
+                <input type="radio" name="food-item" value="Sushi"> Sushi
+            </label>
+        </div>
+        <div class="question">
+            <p>How many servings do you want to order?</p>
+            <input type="number" name="servings" min="1">
+        </div>
+        <div class="question">
+            <p>Any specific dietary preferences or allergies?</p>
+            <textarea name="dietary-preferences" rows="4" cols="50"></textarea>
+        </div>
+        <center>
+        <a href="file:///C:/Users/Raj%20gupta/Desktop/volcanus/boot.html "  target="_blank" style="background-color: #11d31b;"><button>Submit</button></a>
+        </form>
+
+        <h2 style ="background-color: rgb(29, 138, 182);" style = "font-size: x-large;">ThankYou for wisit our site </h2>
+<br><br>
+<footer>
+  <div class="container">
+      <p style="font-size: larger;">&copy; 2023 Shopping Cart-like Website. All Rights Reserved.</p>
+      <center>
+      <a href="rg3620911@gmail.com">Email</a>
+  </div>
+</footer>
+            
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+    </form>
+</body>
+</html>
